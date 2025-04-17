@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camvi - Resumen de Videos con IA</title>
+    <meta name="description" content="Resume videos automáticamente en texto con inteligencia artificial. Prueba gratis.">
+    <link rel="icon" href="/icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Camvi">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+        .container {
+            max-width: 480px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            padding: 32px 24px 24px 24px;
+            text-align: center;
+        }
+        .logo {
+            width: 96px;
+            height: 96px;
+            margin-bottom: 16px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin: 0 0 12px 0;
+            color: #2b4b6f;
+        }
+        p {
+            font-size: 1.1rem;
+            margin: 0 0 24px 0;
+        }
+        .download-btn {
+            display: inline-block;
+            background: #2b4b6f;
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            margin-bottom: 18px;
+            transition: background 0.2s;
+        }
+        .download-btn:hover {
+            background: #1a2d44;
+        }
+        .links {
+            margin-top: 18px;
+            font-size: 0.98rem;
+        }
+        .links a {
+            color: #2b4b6f;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 18px 6px 18px 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/icon.png" alt="Camvi Logo" class="logo">
+        <h1>Camvi</h1>
+        <p>Resume videos automáticamente en texto con inteligencia artificial.<br>Prueba gratis y suscripción mensual.</p>
+        <a class="download-btn" href="https://play.google.com/store/apps/details?id=camvi.app.main" target="_blank">Descargar en Google Play</a>
+        <div class="links">
+            <a href="/privacy_policy.html" target="_blank">Política de Privacidad</a> · 
+            <a href="mailto:soporte@radhikatmosphere.com">Contacto</a>
+        </div>
+    </div>
+    <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+    function isIos() {
+      return /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
+    }
+    function isInStandaloneMode() {
+      return ('standalone' in window.navigator) && window.navigator.standalone;
+    }
+    if (isIos() && !isInStandaloneMode()) {
+      document.write('<div style="background:#ffe; color:#222; padding:12px; text-align:center; border-radius:8px; margin:12px;">Para instalar Camvi en tu iPhone, toca <b>Compartir</b> y luego <b>Añadir a pantalla de inicio</b>.</div>');
+    }
+    </script>
+</body>
+</html>

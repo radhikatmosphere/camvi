@@ -1,0 +1,21 @@
+{
+  "name": "Camvi",
+  "short_name": "Camvi",
+  "description": "Resume videos automáticamente en texto con inteligencia artificial.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#2b4b6f",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+} 
